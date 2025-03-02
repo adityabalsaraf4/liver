@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import joblib
@@ -20,16 +21,16 @@ st.title("Diabetes Prediction")
 
 
 # Input fields with updated variable names and mapping to dataframe columns
-age = st.number_input("Age", min_value=df['Age'].min(), max_value=df['Age'].max(), value=df['Age'].median(), step=1.0)  # Map to 'Age' column
-sex = st.number_input("Sex (1 = Male, 0 = Female)", min_value=df['Gender'].min(), max_value=df['Gender'].max(), value=df['Gender'].median(), step=1)  # Map to 'Gender' column
-Total_Bilirubin = st.number_input("Total_Bilirubin", min_value=df['Total_Bilirubin'].min(), max_value=df['Total_Bilirubin'].max(), value=df['Total_Bilirubin'].median(), step=0.1)
-Direct_Bilirubin = st.number_input("Direct_Bilirubin", min_value=df['Direct_Bilirubin'].min(), max_value=df['Direct_Bilirubin'].max(), value=df['Direct_Bilirubin'].median(), step=0.1)
-Alkaline_Phosphotase = st.number_input("Alkaline_Phosphotase", min_value=df['Alkaline_Phosphotase'].min(), max_value=df['Alkaline_Phosphotase'].max(), value=df['Alkaline_Phosphotase'].median(), step=1)
-Alamine_Aminotransferase = st.number_input("Alamine_Aminotransferase", min_value=df['Alamine_Aminotransferase'].min(), max_value=df['Alamine_Aminotransferase'].max(), value=df['Alamine_Aminotransferase'].median(), step=1)
-Aspartate_Aminotransferase = st.number_input("Aspartate_Aminotransferase", min_value=df['Aspartate_Aminotransferase'].min(), max_value=df['Aspartate_Aminotransferase'].max(), value=df['Aspartate_Aminotransferase'].median(), step=1)
-Total_Protiens = st.number_input("Total_Protiens", min_value=df['Total_Protiens'].min(), max_value=df['Total_Protiens'].max(), value=df['Total_Protiens'].median(), step=0.1)
-Albumin = st.number_input("Albumin", min_value=df['Albumin'].min(), max_value=df['Albumin'].max(), value=df['Albumin'].median(), step=0.1)
-Albumin_and_Globulin_Ratio = st.number_input("Albumin_and_Globulin_Ratio", min_value=df['Albumin_and_Globulin_Ratio'].min(), max_value=df['Albumin_and_Globulin_Ratio'].max(), value=df['Albumin_and_Globulin_Ratio'].median(), step=0.1)
+age = st.number_input("Age", min_value=4, max_value=90, value=4, step=1)  # Map to 'Age' column
+gender = st.number_input("Gender' (1 = Male, 0 = Female)", min_value=0, max_value=1, value=0, step=1)  # Map to 'Gender' column
+Total_Bilirubin = st.number_input("Total_Bilirubin", min_value=0.4, max_value=70, value=0.4, step=0.1)
+Direct_Bilirubin = st.number_input("Direct_Bilirubin", min_value=0.1(), max_value=19.7, value=0.1, step=0.1)
+Alkaline_Phosphotase = st.number_input("Alkaline_Phosphotase", min_value=63, max_value=2110, value=63, step=1)
+Alamine_Aminotransferase = st.number_input("Alamine_Aminotransferase", min_value=10, max_value=2000, value=10, step=1)
+Aspartate_Aminotransferase = st.number_input("Aspartate_Aminotransferase", min_value=10, max_value=4929, value=10, step=1)
+Total_Protiens = st.number_input("Total_Protiens", min_value=2.7, max_value=9.6, value=2.7, step=0.1)
+Albumin = st.number_input("Albumin", min_value=0.9, max_value=5.5, value=0.9, step=0.1)
+Albumin_and_Globulin_Ratio = st.number_input("Albumin_and_Globulin_Ratio", min_value=0.3, max_value=2.8, value=0.3, step=0.1)
 
 
 # Create the input dictionary for prediction
