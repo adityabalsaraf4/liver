@@ -20,7 +20,7 @@ st.title("Diabetes Prediction")
 
 
 # Input fields with updated variable names and mapping to dataframe columns
-age = st.number_input("Age", min_value=df['Age'].min(), max_value=df['Age'].max(), value=df['Age'].median(), step=1)  # Map to 'Age' column
+age = st.number_input("Age", min_value=df['Age'].min(), max_value=df['Age'].max(), value=df['Age'].median(), step=1.0)  # Map to 'Age' column
 sex = st.number_input("Sex (1 = Male, 0 = Female)", min_value=df['Gender'].min(), max_value=df['Gender'].max(), value=df['Gender'].median(), step=1)  # Map to 'Gender' column
 Total_Bilirubin = st.number_input("Total_Bilirubin", min_value=df['Total_Bilirubin'].min(), max_value=df['Total_Bilirubin'].max(), value=df['Total_Bilirubin'].median(), step=0.1)
 Direct_Bilirubin = st.number_input("Direct_Bilirubin", min_value=df['Direct_Bilirubin'].min(), max_value=df['Direct_Bilirubin'].max(), value=df['Direct_Bilirubin'].median(), step=0.1)
