@@ -6,7 +6,7 @@ import numpy as np
 # Load the pre-trained classifier and scaler using joblib
 classifier = joblib.load('knn_model.joblib')
 scaler = joblib.load('scaler.joblib')
-
+df = pd.read_csv('indian_liver_patient.csv')
 # Define the prediction function
 def predict_diabetes(d):
     sample_data = pd.DataFrame([d])
