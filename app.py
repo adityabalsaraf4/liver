@@ -37,7 +37,7 @@ Albumin_and_Globulin_Ratio = st.number_input("Albumin_and_Globulin_Ratio", min_v
 input_data = {
   'Age': 65,
  'Gender': 1,
- 'Total_Bilirubin	': 0.7,
+ 'Total_Bilirubin': 0.7,
  'Direct_Bilirubin': 0.1,
  'Alkaline_Phosphotase': 187,
  'Alamine_Aminotransferase': 16,
